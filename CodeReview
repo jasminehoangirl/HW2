@@ -1,0 +1,16 @@
+Code Review
+
+1. Author Type Consistency - High Priority
+The author field is declared as a String, but the getter and setter use the User type. This causes compilation errors. The field and its associated methods should use a consistent type.
+
+2. Naming Convention — Low Priority
+
+The setter setID() does not match the naming style of getId(). Renaming it to setId() would improve consistency and readability.
+
+3. Input Validation — Medium Priority
+
+The editAnswer() method updates the answer without validating the new text. Adding a check for null or blank input would help prevent invalid answer content.
+
+4. Deletion Behavior — Medium Priority
+
+The deleteAnswer() method displays a confirmation message but does not actually delete the answer. The implementation should be connected to the appropriate deletion process or handled by the class responsible for data storage.
